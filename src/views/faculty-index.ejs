@@ -1,0 +1,115 @@
+<section class="cards-container bg-blue aliginment">
+    <div class="card ht">
+        <div class="card-inner">
+            <div class="card-inner-info">
+            <div class="card-inner-logo">
+                <img src="img/suggestion.png" alt="" style="width: 45px;">
+            </div>
+            <div class="card-inner-count">
+                <div class="card-count-text">
+                <p class="count-text"><%= noofsuggestions %></p>
+            </div>
+                <p class="card-info-text">SUGGESTION RECEVIED</p>
+            </div>
+        </div>
+        <div class="card-inner-info">
+            <div class="card-inner-logo">
+                <img src="img/suggestion.png" alt="" style="width: 45px;">
+            </div>
+            <div class="card-inner-count">
+                <div class="card-count-text">
+                <p class="count-text"><%= noofsuggestionssolved %></p>
+                <img src="img/correct.png" alt="" style="width: 10px; height: 10px;">
+            </div>
+                <p class="card-info-text">SUGGESTIONS IMPLEMENTED</p>
+                
+            </div>
+        </div>
+        </div>
+
+    </div>
+    <div class="card ht">
+        <div class="card-inner">
+            <div class="card-inner-info">
+            <div class="card-inner-logo">
+                <img src="img/Complaint.png" alt="" style="width: 45px;">
+            </div>
+            <div class="card-inner-count">
+                <div class="card-count-text">
+                <p class="count-text"><%= noofcomplaints %></p>
+                
+            </div>
+                <p class="card-info-text">COMPLAINTS RAISED</p>
+            </div>
+        </div>
+        <div class="card-inner-info">
+            <div class="card-inner-logo">
+                <img src="img/Complaint.png" alt="" style="width: 45px;">
+            </div>
+            <div class="card-inner-count">
+                <div class="card-count-text">
+                <p class="count-text"><%= noofcomplaintssolved %></p>
+                <img src="img/correct.png" alt="" style="width: 10px; height: 10px;">
+            </div>
+                <p class="card-info-text">COMPLAINTS SOLVED</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="card ht">
+        <div class="card-inner">
+            <div class="card-inner-info">
+            <div class="card-inner-logo">
+                <img src="img/Antiragging.png" alt="" style="width: 45px;">
+            </div>
+            <div class="card-inner-count">
+                <div class="card-count-text">
+                <p class="count-text"><%= noofragging %></p>
+            </div>
+                <p class="card-info-text">RAGGING INCIDENTS</p>
+            </div>
+        </div>
+        <div class="card-inner-info">
+            <div class="card-inner-logo">
+                <img src="img/Antiragging.png" alt="" style="width: 45px;">
+            </div>
+            <div class="card-inner-count">
+                <div class="card-count-text">
+                <p class="count-text"><%=noofraggingssolved  %></p>
+                <img src="img/correct.png" alt="" style="width: 10px; height: 10px;">
+            </div>
+                <p class="card-info-text">ACTIONS AGAINST ACCUSED</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    
+</section>
+<section class="bar-container ">
+    <a href="suggestion"> <div class="bar bg-blue">
+     <div class="bar-inner-logo">
+         <img src="img/suggestion.png" alt="" style="width: 50px;">
+         <p class="bar-text">SUGGESTIONS TO REVIEW</p>
+     </div>
+     <p class="bar-count"><%= noofsuggestions - noofsuggestionssolved %></p>
+     <img src="img/arrow.png" alt="" style="width: 30px;">
+     </div></a>
+     <a href="complaint"> <div class="bar bg-blue">
+         <div class="bar-inner-logo">
+             <img src="img/Complaint.png" alt="" style="width: 50px;">
+             <p class="bar-text">COMPLAINTS TO REVIEW</p>
+         </div>
+         <p class="bar-count"><%= noofcomplaints-noofcomplaintssolved %></p>
+         <img src="img/arrow.png" alt="" style="width: 30px;">
+         </div></a>
+         <a href="antiragging"> <div class="bar bg-blue">
+             <div class="bar-inner-logo">
+                 <img src="img/Antiragging.png" alt="" style="width: 50px;">
+                 <p class="bar-text">RAGGING INCIDENTS TO REVIEW</p>
+             </div>
+             <p class="bar-count"><%= noofragging -noofraggingssolved %></p>
+             <img src="img/arrow.png" alt="" style="width: 30px;">
+             </div></a>
+     
+ </section>

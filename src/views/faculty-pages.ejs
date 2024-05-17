@@ -1,0 +1,94 @@
+<section class="container ">
+    <div class="section-1 ">
+        <ul class="s-menu">
+            <li id="suggestion" class="s-item"><a class="active" href="#section-2"><img
+                        src="img/<%= local.imgsrc %>.png" style="filter: invert(1);" alt="" class="s-logo">
+                    <h3 class="s-item-heading">
+                        <%= local.title %>
+                    </h3>
+                </a></li>
+            <li id="feedback" class="s-item"><a href="#"><img src="img/correct.png" alt="" class="s-logo"
+                        style="filter: invert(1);width: 20px; height: 20px;">
+                    <h3 class="s-item-heading">
+                        <%= local.des %>
+                    </h3>
+                </a></li>
+        </ul>
+    </div>
+
+    <!-- ------------------------------FORM FOR REVIEW------------------ -->
+
+    <div class="section-2 ">
+
+        <% if (dataforupdate==0) { %>
+            <h1 class="s-heading"> No <%=local.title2%></h1>
+        <% } else{ %>
+        <h1 class="s-heading">
+            <%=local.title2%>
+        </h1>
+        <% } %>
+        <ul class="ul-s3">
+            <% dataforupdate.forEach(element=> { %>
+                <li class="li-s3">
+                    
+                    <div class="section-3-container">
+                        <h1 class="s-heading">
+                          Title :  <%= element.title %>
+                        </h1>
+                        <div class="suggestion-container">
+                            
+                            <p class="s-text">
+                              Subject:  <%= element.subject %>
+                            </p>
+                            <br>
+                            <p class="s-text">
+                                <%= element.description %>
+                            </p>
+                        </div>
+                        <h1 class="s-heading">Your Review
+                        </h1>
+                    </div>
+                    <form action="/<%= local.formaction %>/<%= element._id %>?_method=PUT" class="input-section" method="POST">
+                        <textarea name="description" id="" class="description" rows="20" placeholder="feedback:"
+                            required minlength="8"></textarea>
+                        <input class="btn-submit" type="submit" value="Submit">
+                    </form>
+                </li>
+                <% }) %>
+        </ul>
+    </div>
+    <!-- ------------------------------REVIEWD SUGGESTIONS------------------ -->
+    <div class="section-3 ">
+        <h1 class="s-heading">
+            <%=local.title3%>
+        </h1>
+        <ul class="ul-s3">
+            <% dataupdated.forEach(element=> { %>
+                <li class="li-s3">
+                    <div class="section-3-container">
+                        <h1 class="s-heading">
+                            <%= element.title %>
+                        </h1>
+                        <div class="suggestion-container">
+
+                            <p class="s-text">
+                                <%= element.subject %>
+                            </p>
+                            <br>
+                            <p class="s-text">
+                                <%= element.description %>
+                            </p>
+                        </div>
+                        <h1 class="s-heading"> Your Review
+                        </h1>
+                        <div class="suggestion-container">
+                            <p class="s-text">
+                                <%= element.feedback %>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <% }) %>
+        </ul>
+    </div>
+</section>

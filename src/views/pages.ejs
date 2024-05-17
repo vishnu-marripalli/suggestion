@@ -1,0 +1,45 @@
+<section class="container ">
+    <div class="section-1 ">
+        <ul class="s-menu">
+            <li id="suggestion" class="s-item"><a class="active" href="#section-2"><img src="img/<%= local.imgsrc %>.png"
+                        style="filter: invert(1);" alt="" class="s-logo">
+                    <h3 class="s-item-heading"><%= local.title %></h3>
+                </a></li>
+            <li id="feedback" class="s-item"><a href="#"><img src="img/correct.png" alt="" class="s-logo"
+                        style="filter: invert(1);width: 20px; height: 20px;">
+                    <h3 class="s-item-heading"><%= local.des %></h3>
+                </a></li>
+        </ul>
+    </div>
+    <div class="section-2 ">
+        <h1 class="s-heading"><%=local.title2%></h1>
+        <form action="/<%= local.formaction %>" class="input-section" method="POST">
+            <input class="title" type="text" placeholder="Title:" name="title" required>
+            <input class="subject" type="text" placeholder="Subject:" name="subject" required>
+            <textarea name="description" id="" class="description" rows="20" placeholder="Description:" required minlength="800"></textarea>
+           <input class="btn-submit" type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="section-3 ">
+        <ul class="ul-s3">
+            <% data.forEach(element=> { %>
+               <li class="li-s3"> <div class="section-3-container">
+                    <h1 class="s-heading">
+                        <%= element.title %>
+                    </h1>
+                    <div class="suggestion-container">
+                        
+                        <p class="s-text"><%= element.subject %></p>
+                        <br>
+                        <p class="s-text"><%= element.description %></p>
+                    </div>
+                    <h1 class="s-heading">Feedback for <%= element.title %></h1>
+                    <div class="suggestion-container">
+                        <p class="s-text"><%= element.feedback %></p>
+                    </div>
+                </div>
+            </li>
+                <% }) %>
+        </ul>
+    </div>
+</section>

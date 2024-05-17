@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    margin: 0px;
+}
+.body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 100px;
+    padding: 10px;
+    justify-content: space-around;
+}
+.section-1{
+    display: flex;
+    align-items: center;
+ 
+}
+.keca-logo{
+    width: 150px;
+}
+.section-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.login-img{
+    width:300px;
+    /* height: 100px; */
+}
+.headings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.main-heading{
+    color: #161697;
+    font-size: 32px;
+    font-family: "Encode Sans Expanded", sans-serif;
+}
+.sub-heading{
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+    font-family: "Encode Sans Expanded", sans-serif;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.input-login{
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+}
+
+.login-btn{
+    background-color: white;
+    color: #161697;
+    border-radius: 22px;
+    border: 1px black ;
+    border-style: groove;
+    padding: 10px;
+    width: 100px;
+   
+}
+.main-heading-1{
+    display: none;
+    font-size: 32px;
+    font-family: "Encode Sans Expanded", sans-serif;
+}
+.f-btn {
+position: absolute;
+top: 0px;
+/* left: 0px; */
+}
+.faculty-img-1{
+    display: none;
+}
+
+
+
+
+
+@media(max-width:1200px){
+.body{
+    flex-direction: column-reverse;
+    margin: 20px;
+}
+.main-heading{
+    display: none;
+}
+.main-heading-1{
+    display: block;
+}
+.f-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    }
+
+.faculty-img{
+    display: none;
+}
+.faculty-img-1{
+    display: block;
+}
+.sub-heading{
+    font-size: 14px;
+    
+}
+
+    
+}
+
+
+@media(max-width:600px){
+    .sub-heading{
+        font-size: 12px;
+       
+    }
+}

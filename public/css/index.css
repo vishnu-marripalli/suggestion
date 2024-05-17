@@ -1,0 +1,504 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+}
+p{
+    margin: 0;
+}
+.border{
+    border: 2px solid black;
+}
+
+/* css for navbar */
+
+.nav-bar{
+    /* width: 100vw; */
+    height: 145px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+}
+.logo-container{
+    width: 340px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.kcea-logo{
+    width: 70px;
+    height: 70px;
+}
+.kcea-name{
+    width: 240px;
+    height: 70px;
+}
+.student-container{
+    width: 300px;
+    display: flex;
+    gap: 2px;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.student-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.student-name{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+
+}
+.student-htno{
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+.student-logo{
+    width: 60px;
+    height: 60px;
+}
+.logoutlogo,.logoutlogo-1{
+    width: 50px;
+    height: 50px;
+}
+.nav-section-1{
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 47px;
+}
+
+.nav-menu{
+    display: flex;
+    padding-left: 100px;
+    flex-direction: row;
+    gap: 70px;
+}
+
+
+.nav-items{
+    list-style: none;
+}
+.nav-items a{
+    text-decoration: none;
+    color: #000;
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+
+}
+.ham{
+    display: none;
+}
+.student-container-1{
+    display: none;
+}
+.logout-inner{
+    display: none;
+}
+.hr-1{
+    display: none;
+}
+.hr-2{
+    display: none;
+}
+
+/* css for footer*/
+.footer{
+    height: 150px;
+    /* width: 100vw; */
+    /* position: absolute;
+    bottom: 0; */
+    background-color: #5183B8;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-section-1{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.footer-menu{
+    display: flex;
+    flex-direction: row;
+    gap: 111px;
+    justify-content: center;
+}
+.footer-menu .nav-items a{
+    color: white;
+    font-size: 12px;
+}
+.footer-logos{
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-logo{
+    width: 30px;
+    height: 30px;
+}
+.footer-section-2{
+    display: flex;
+    justify-content: center;
+}
+.footer-section-2 p{
+    color: white;
+    font-size: 12px;
+   font-family: "Open Sans", sans-serif;
+   font-weight: 500;
+}
+
+/* CSS for slideing img */
+
+.slide-container{
+    /* width: 90%; */
+    /* height: 300px; */
+    margin: 60px;
+    padding: 50px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.slide{
+    width: 50%;
+    display: none;
+}
+
+.slide-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.slide-logo{
+    height: 50px;
+    width: 10px;
+    cursor: pointer;
+}
+.slide-img{
+    height: 200px;
+    width: 300px;
+    
+}
+.slide-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.slide-heading{
+    font-size: 20px;
+    font-family: "Alef", sans-serif;
+    font-weight: bold;
+}
+.slide-text{
+    font-size: 14px;
+    font-family: "Alef", sans-serif;
+    
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  .cards-container{
+    margin: 60px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .bg-blue{
+    background-color: #5183B8;
+    color: white;
+  }
+
+  .bg-gray{
+    background-color: #F7F7F7;
+  }
+  .bg-gray img{
+    filter: invert(1);
+  }
+  .card-explore a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+  }
+
+  .b{
+    color: #000;
+  }
+  .card-heading{
+    font-size: 16px;
+    font-family: "Nunito Sans", sans-serif;
+  }
+  .card-text{
+    font-size: 14px;
+    font-family: "Nunito Sans", sans-serif;
+  }
+
+  .card-inner{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.card-count-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.card-info-text{
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+.ht{
+    height: 200px;
+    padding: 0px;
+}
+.aliginment{
+    align-items: center;
+    height: fit-content;
+}
+.card-inner-info{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.card-inner-count{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.bar-container{
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.bar-container a{
+    text-decoration: none;
+    color: white;
+}
+
+.bar{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bar-inner-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 300px;
+
+}
+.bar-text{
+    font-family: "Lato", sans-serif;
+}
+
+
+
+
+
+
+
+@media(max-width:1200px) {
+    /* css for navbar */
+    .hr{
+        display: none;
+    }
+    .nav-section-2{
+        padding-top: 10px;
+        width: 40vw;
+        max-width: 400px;
+        height: 100vh;
+        z-index: 999;
+        background-color: white;
+        position: absolute;
+        top: 0px;
+        left: -120%;
+        transition: all 0.1s;
+        position: fixed;
+       
+        
+    }
+    .nav-menu{
+        flex-direction: column;
+        padding: 10px;
+        gap: 20px;
+    }
+    .ham{
+        display: block;
+        width: 40px;
+    }
+    .nav-bar{
+        height: 60px;
+        padding: 0;
+        overflow: hidden;
+    }
+    .nav-section-1{
+        margin: 10px;
+        padding: 0;
+    }
+    .kcea-logo{
+        width: 50px;
+        height: 50px;
+    }
+    .kcea-name{
+        width: 200px;
+        height: 50px;
+    }
+    .student-logo{
+        width: 50px;
+        height: 50px;
+    }
+    .student-container-1{
+        display: block;
+        width: 300px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    
+    }
+    .logout-inner{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    .hr-1{
+        display: block;
+    }
+    .hr-2{
+        display: block;
+    }
+    .nav-section-2-inner{
+        height: 88vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .logout-name{
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    /* css for footer */
+    .footer{
+        height: 200px;
+    }
+    .footer-menu{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-section-1{
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-around;
+    }
+    .footer-logos{
+        align-items: center;
+    }
+
+    /* CSS for slide */
+
+    .slide-inner{
+        flex-direction: column;
+    }
+    .slide-img,.slide-info{
+        height: 150px;
+        width: 250px;
+        
+    }
+    .cards-container{
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+    .card{
+        height: 300px;
+    }
+    .ht{
+        height: 200px;
+        padding: 0px;
+    }
+    .bar-container{
+        margin: 20px;
+    }
+}
+@media(max-width:600px) {
+
+    /* css for navbar */
+    .hr,.student-details,.logoutlogo{
+        display: none;
+    }
+    .student-container{
+        justify-content: flex-end;
+    }
+    .student-container-1{
+        width: 200px;
+    }
+    .nav-section-2{
+        width: 50vw;
+    }
+    .student-name,.student-htno{
+        font-size: 12px;
+    }
+    .slide-container{
+        margin: 20px;
+        padding: 50px 0px;
+    }
+    .cards-container{
+        margin: 20px;
+    }
+
+
+}
+
+@media(max-width:400px) {
+    .student-container-1{
+        width: 166px;
+        gap: 0px;
+    }
+    .slide-container{
+        gap: 25px;
+    }
+    .logo-container{
+        gap: 2px;
+    }
+}
